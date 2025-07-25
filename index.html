@@ -3,121 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Condensed, sans-serif;
+    <title>wooribank</title>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white-color : #ffffff;
+    --px-nav : 0 15%;
+    --nav-color: #000000;
+    --main-font: "Source Sans 3", sans-serif;
+}
+header{
+    width: 100%;
+    height: 127px;
+
+    & #nav-up{
+        width: 100%;
+        height: 67px;
+        background-color: var(--white-color);
+        padding: var(--px-nav);
+        display: flex;
+
+        & #sect-left{
+            width: 50%;
+            height: 100%;
+
+            & a{
+                width: 100%;
+                height: 100%;
+
+                & img{
+                width: 375px;
+                height: 100%;
+                object-fit: contain;
+
+                }
+            }
         }
-        body {
-            background-color: #6ed157;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        & #sect-right{
+            width: 50%;
+            height: 100%;
+            display: flex; 
+            justify-content: end;
+
+            & ul{
+                width: 70%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & li{
+                    list-style-type: none;
+
+                    & #v-line{
+                            font-size: 30px;
+                    }
+
+                    & a{
+                        text-decoration: none;
+                        color: var(--nav-color);
+                        font-family: var(--main-font);
+
+                        & img{
+                            width: 30px;
+                        }
+
+                        & #info{
+                            display: flex; 
+                            align-items: center;
+                            gap: 5px;
+
+                            & #icon{
+                                color: var(--primary-color);
+                            }
+                        }
+                        
+                        & #lang{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
         }
-        .register-form {
-            background-color: #77cf6d;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 400px;
-        }
-        .register-form h2 {
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .register-form p.description {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #220505;
-        }
-        .register-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .register-form label span {
-            color: red;
-        }
-        .register-form input[type="email"],
-        .register-form input[type="password"],
-        .register-form input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-bottom: 2px solid #ec9999;
-            margin-bottom: 15px;
-            background: #e2c5c5;
-        }
-        .register-form .note {
-            font-size: 12px;
-            color: gray;
-            margin-top: -10px;
-            margin-bottom: 15px;
-        }
-        .register-form .checkbox {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .register-form .checkbox input {
-            margin-right: 10px;
-        }
-        .register-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .register-form .login-link {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
-        .register-form .login-link a {
-            font-weight: bold;
-            color: rgb(209, 124, 5);
-            text-decoration: none;
-        }
-    </style>
+    }
+    & #nav-down{
+        width: 100%;
+        height: calc(100% - 67px);
+        background-color: var(--primary-color);
+        padding: var(--px-nav);
+
+    }
+ .main-nav {
+  background-color: #0067ac;
+  text-align: center;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0 30px;
+}
+
+.main-nav li {
+  margin: 0 15px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 35px 0;
+  display: inline-block;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+}
+   </style>
 </head>
 <body>
-    <form class="register-form">
-        <h2>Register with ETEC</h2>
-        <p class="description">Register with us for more information about courses.</p>
-
-        <label>Email Address <span>*</span></label>
-        <input type="email" placeholder="example123@gmail.com">
-        <p class="note"><strong>Note:</strong> We will send the code via this email</p>
-
-        <label>Password <span>*</span></label>
-        <input type="password" placeholder="########">
-
-        <label>Confirm Password <span>*</span></label>
-        <input type="password" placeholder="########">
-
-        <label>User Name <span>*</span></label>
-        <input type="text" placeholder="Jack Ma">
-
-        <div class="checkbox">
-            <input type="checkbox" id="remember">
-            <label for="remember" style="font-weight: normal;">Remember Me</label>
-        </div>
-
-        <button type="submit">Register Now</button>
-
-        <div class="login-link">
-            or you had an account ? <a href="#">Log In</a>
-        </div>
-    </form>
+    <header>
+        <nav id="nav-up">
+            <section id="sect-left">
+                <a href="#"><img src="https://www.wooribank.com.kh/wp-content/uploads/2022/07/cropped-cropped-Header-Logo-1.png" alt=""></a>
+            </section>
+            <section id="sect-right">
+                <ul>
+                    <li><a href="#">
+                        <div id="info">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="icon" width="30" height="30" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                            </svg>
+                            About Us
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </div>
+                    </a></li>
+                    <li><a href="#" id="v-line">|</a></li>
+                    <li><a href="#">
+                        <img src="https://www.wooribank.com.kh/wp-content/themes/wpfinance/images/search-icon.png" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="https://www.wooribank.com.kh/wp-content/themes/wpfinance/images/call-icon.png" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="https://www.wooribank.com.kh/wp-content/themes/wpfinance/images/location-icon.png" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <div id="lang">
+                            <img src="https://www.wooribank.com.kh/wp-content/polylang/en_US.png" alt="">
+                            English
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </div>
+                    </a></li>
+                </ul>
+            </section>
+        </nav>
+        <nav id="nav-down"></nav>
+         <nav class="main-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Personal Banking <i class="fas fa-caret-down"></i></a></li>
+      <li><a href="#">Business Banking <i class="fas fa-caret-down"></i></a></li>
+      <li><a href="#">Digital Banking <i class="fas fa-caret-down"></i></a></li>
+      <li><a href="#">Promotions</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">CSR</a></li>
+      <li><a href="#">Merchant Discounts</a></li>
+      <li><a href="#">Internet Banking</a></li>
+    </ul>
+  </nav>
+    </header>
 </body>
 </html>
