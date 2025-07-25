@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form HTML</title>
+  <style>
+    h1 {
+      font-family: sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form GUI</h1>
+  <form action="../View/example10.html">
+    <label for="name">Please enter your full name here:</label>
+    <br>
+    <input value="Reaksa" type="text" placeholder="Full Name..." id="name">
+    <br>
+    <label for="email">Please enter your email address here:</label>
+    <br>
+    <input required placeholder="Email Address..." type="email" id="email">
+    <br>
+    <label for="pass">Please enter your password here:</label>
+    <br>
+    <input minlength="8" maxlength="16" type="password" placeholder="xxxxxxxxxx" id="pass">
+    <br>
+    <label for="bd">Please input your date of birth:</label>
+    <br>
+    <input type="datetime-local" id="bd">
+    <br>
+    <label for="age">Please input your age here:</label>
+    <br>
+    <input type="number" id="age" min="0" max="100">
+    <br>
+    <label for="">Choose your gender here:</label>
+    <br>
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label>
+    <input type="radio" name="gender" id="other">
+    <label for="other">Other</label>
+    <br>
+    <label for="country">Choose your country:</label>
+    <br>
+    <select id="country">
+      <option value="cambodia">Cambodia</option>
+      <option value="vietnam" selected>Vietnam</option>
+      <option value="indonesia">Indonesia</option>
+      <option value="malaysia">Malaysia</option>
+    </select>
+    <br>
+    <label for="msg">Send me your idea!</label>
+    <br>
+    <textarea rows="10" cols="50" placeholder="Text..." id="msg"></textarea>
+    <br>
+    <button type="Reset">Submit</button>
+  </form>
+</body>
+</html>

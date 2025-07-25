@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Condensed, sans-serif;
+        }
+        body {
+            background-color: #6ed157;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .register-form {
+            background-color: #77cf6d;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        .register-form h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .register-form p.description {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #220505;
+        }
+        .register-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .register-form label span {
+            color: red;
+        }
+        .register-form input[type="email"],
+        .register-form input[type="password"],
+        .register-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #ec9999;
+            margin-bottom: 15px;
+            background: #e2c5c5;
+        }
+        .register-form .note {
+            font-size: 12px;
+            color: gray;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        .register-form .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .register-form .checkbox input {
+            margin-right: 10px;
+        }
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .register-form .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .register-form .login-link a {
+            font-weight: bold;
+            color: rgb(209, 124, 5);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form class="register-form">
+        <h2>Register with ETEC</h2>
+        <p class="description">Register with us for more information about courses.</p>
+
+        <label>Email Address <span>*</span></label>
+        <input type="email" placeholder="example123@gmail.com">
+        <p class="note"><strong>Note:</strong> We will send the code via this email</p>
+
+        <label>Password <span>*</span></label>
+        <input type="password" placeholder="########">
+
+        <label>Confirm Password <span>*</span></label>
+        <input type="password" placeholder="########">
+
+        <label>User Name <span>*</span></label>
+        <input type="text" placeholder="Jack Ma">
+
+        <div class="checkbox">
+            <input type="checkbox" id="remember">
+            <label for="remember" style="font-weight: normal;">Remember Me</label>
+        </div>
+
+        <button type="submit">Register Now</button>
+
+        <div class="login-link">
+            or you had an account ? <a href="#">Log In</a>
+        </div>
+    </form>
+</body>
+</html>

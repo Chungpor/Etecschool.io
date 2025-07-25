@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funny Cat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #8B0000;
+            border-bottom: 2px solid #8B0000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .image-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            border-color: #8B0000;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Demo 4 : Image Element</h1>
+
+    <div class="image-container">
+        <img src="./img/360_F_334005976_10Y3Vv7bA2DnYBBe3dIIOebTE29eFEv6.jpg" alt="Funny Cat 1">
+        <img src="./img/CatImage.jpg" alt="Funny Cat 2">
+    </div>
+
+</body>
+</html>

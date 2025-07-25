@@ -1,0 +1,78 @@
+body {
+    font-family:  sans-serif;
+    background-color: #e6ede9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #d38766;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(14, 237, 66);
+    width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #955050;
+    margin-bottom: 5px;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #d16161df;
+    border-radius: 6px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f1f1f1;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup-link {
+    font-size: 14px;
+}
+
+.signup-link a {
+    text-decoration: none;
+    color: #007bff;
+}
